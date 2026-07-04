@@ -3,80 +3,662 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Platinum Aizawl - 4 Star Luxury Hotel</title>
+<title>Hotel Platinum | Luxury Hotel in Aizawl</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-  body { background: #0a0a0a; color: #fff; }
-  
-  header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hall.jpg') center/cover; 
-           height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-  header h1 { font-size: 3.5em; color: #D4AF37; margin-bottom: 10px; letter-spacing: 3px; text-shadow: 2px 2px 10px #000; }
-  header p { font-size: 1.3em; margin-bottom: 30px; color: #eee; text-shadow: 1px 1px 5px #000; }
-  
-  .btn { padding: 18px 35px; margin: 10px; border: none; border-radius: 50px; font-size: 1.1em; font-weight: bold; 
-         cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s; }
-  .btn-whatsapp { background: #25D366; color: white; }
-  .btn-call { background: #D4AF37; color: #000; }
-  .btn:hover { transform: scale(1.05); }
-  
-  section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-  h2 { text-align: center; font-size: 2.5em; margin-bottom: 20px; color: #D4AF37; }
-  .rooms { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-  .room-card { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #D4AF37; transition: 0.3s; }
-  .room-card:hover { transform: translateY(-5px); }
-  .room-card img { width: 100%; height: 220px; object-fit: cover; }
-  .room-card div { padding: 20px; }
-  .price { color: #D4AF37; font-size: 1.4em; font-weight: bold; }
-  
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-  .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; border: 2px solid #D4AF37; }
-  
-  footer { background: #000; text-align: center; padding: 30px; border-top: 2px solid #D4AF37; }
-  .contact-info { margin: 15px 0; font-size: 1.1em; }
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#090909;
+color:#fff;
+line-height:1.6;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("suite.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero{
+max-width:800px;
+animation:fadeIn 1.2s ease;
+}
+
+.hero h1{
+font-size:60px;
+color:#D4AF37;
+letter-spacing:4px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+color:#eee;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 35px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.call{
+background:#D4AF37;
+color:black;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.features{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+font-size:17px;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#D4AF37;
+margin-bottom:50px;
+}
+
+.rooms{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:#181818;
+border-radius:18px;
+overflow:hidden;
+transition:.4s;
+border:1px solid #333;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#D4AF37;
+}
+
+.card img{
+height:240px;
+object-fit:cover;
+}
+
+.content{
+padding:22px;
+}
+
+.content h3{
+color:#D4AF37;
+margin-bottom:10px;
+}
+
+.price{
+font-size:25px;
+font-weight:bold;
+margin-top:15px;
+color:#D4AF37;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+.gallery img{
+height:220px;
+object-fit:cover;
+border-radius:12px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.facilities{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.facility{
+background:#181818;
+padding:30px;
+border-radius:15px;
+}
+
+footer{
+background:#000;
+padding:50px 20px;
+text-align:center;
+margin-top:50px;
+border-top:2px solid #D4AF37;
+}
+
+footer h2{
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.title{
+font-size:32px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>HOTEL PLATINUM</h1>
-  <p>Zarkawl, Aizawl's Premier 4-Star Luxury Experience</p>
-  <a href="https://wa.me/916909158272?text=Hi%20Hotel%20Platinum%2C%20I%20want%20to%20book%20a%20room" class="btn btn-whatsapp">WhatsApp Booking</a>
-  <a href="tel:+916909158272" class="btn btn-call">Call Now</a>
+
+<div class="hero">
+
+<h1>HOTEL PLATINUM</h1>
+
+<p>
+Luxury • Comfort • Hospitality
+<br>
+Experience the Finest Stay in Aizawl
+</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/916909158272" class="btn whatsapp">
+Book on WhatsApp
+</a>
+
+<a href="tel:+916909158272" class="btn call">
+Call Now
+</a>
+
+</div>
+
+<div class="features">
+
+<span>⭐ 4-Star Experience</span>
+
+<span>📶 Free Wi-Fi</span>
+
+<span>🍽 Restaurant</span>
+
+<span>🍸 Bar</span>
+
+<span>🚗 Parking</span>
+
+</div>
+
+</div>
+
 </header>
+<!-- ABOUT -->
 
 <section>
-  <h2>Rooms & Tariff</h2>
-  <div class="rooms">
-    <div class="room-card">
-      <img src="room1.jpg" alt="Presidential Suite">
-      <div>
-        <h3>Presidential Suite</h3>
-        <p>King Bed, Living Area, City View, Free WiFi</p>
-        <p class="price">₹6,000 / night</p>
-      </div>
-    </div>
-    <div class="room-card">
-      <img src="room2.jpg" alt="Deluxe Room">
-      <div>
-        <h3>Deluxe Room</h3>
-        <p>AC, Hot Water, TV, Room Service</p>
-        <p class="price">₹3,500 / night</p>
-      </div>
-    </div>
-    <div class="room-card">
-      <img src="honeymoon.jpg" alt="Honeymoon Room">
-      <div>
-        <h3>Honeymoon Special</h3>
-        <p>Rose Decor, Sofa, Premium Amenities</p>
-        <p class="price">₹4,500 / night</p>
-      </div>
-    </div>
-  </div>
+
+<h2 class="title">Welcome to Hotel Platinum</h2>
+
+<div style="max-width:900px;margin:auto;text-align:center;font-size:18px;line-height:1.9;color:#ddd;">
+
+Hotel Platinum is one of Aizawl's finest destinations for luxury accommodation.
+Located at Zarkawt, we provide elegant rooms, modern facilities, delicious dining,
+and warm hospitality for business travellers, families, and tourists.
+
+<br><br>
+
+Whether you're visiting for work or leisure, Hotel Platinum offers a comfortable,
+safe, and memorable stay.
+
+</div>
+
 </section>
 
+
+<!-- ROOMS -->
+
 <section style="background:#111;">
-  <h2>Restaurant & Bar</h2>
-  <div class="rooms">
-    <div class="room-card">
-      <img src="restaurant.jpg" alt="Dining">
-      <div><h3>Fine Dining Restaurant</h3>
+
+<h2 class="title">Rooms & Tariff</h2>
+
+<div class="rooms">
+
+<div class="card">
+
+<img src="suite.jpg">
+
+<div class="content">
+
+<h3>Presidential Suite</h3>
+
+<p>
+Large luxury suite with spacious living area,
+premium furnishings, king-size bed,
+city view and complimentary Wi-Fi.
+</p>
+
+<div class="price">
+₹6,000 / Night
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="honeymoon.jpg">
+
+<div class="content">
+
+<h3>Honeymoon Suite</h3>
+
+<p>
+Beautifully decorated room for couples
+with romantic ambience,
+comfortable sofa,
+modern bathroom and premium amenities.
+</p>
+
+<div class="price">
+₹4,500 / Night
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="room1.jpg">
+
+<div class="content">
+
+<h3>Deluxe Room</h3>
+
+<p>
+Comfortable king-size bed,
+air conditioning,
+hot shower,
+LED TV,
+electric kettle
+and room service.
+</p>
+
+<div class="price">
+₹3,500 / Night
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- RESTAURANT -->
+
+<section>
+
+<h2 class="title">
+Restaurant & Bar
+</h2>
+
+<div class="rooms">
+
+<div class="card">
+
+<img src="restaurant.jpg">
+
+<div class="content">
+
+<h3>Fine Dining Restaurant</h3>
+
+<p>
+
+Enjoy delicious Indian,
+Chinese,
+Continental
+and local Mizo cuisine
+prepared by experienced chefs.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="bar.jpg">
+
+<div class="content">
+
+<h3>Premium Bar</h3>
+
+<p>
+
+Relax with premium beverages
+in a stylish atmosphere
+perfect for evening gatherings
+and celebrations.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- FACILITIES -->
+
+<section style="background:#111;">
+
+<h2 class="title">Hotel Facilities</h2>
+
+<div class="facilities">
+
+<div class="facility">
+<h3>📶 Free Wi-Fi</h3>
+<p>High-speed wireless internet throughout the hotel.</p>
+</div>
+
+<div class="facility">
+<h3>🚗 Free Parking</h3>
+<p>Safe parking space for all hotel guests.</p>
+</div>
+
+<div class="facility">
+<h3>🛎 Room Service</h3>
+<p>Friendly room service available during operating hours.</p>
+</div>
+
+<div class="facility">
+<h3>🚿 Hot Water</h3>
+<p>24-hour hot and cold water in every room.</p>
+</div>
+
+<div class="facility">
+<h3>🍽 Restaurant</h3>
+<p>Fresh breakfast, lunch and dinner served daily.</p>
+</div>
+
+<div class="facility">
+<h3>🍸 Premium Bar</h3>
+<p>Relax and enjoy quality drinks in a comfortable setting.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section>
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="hall.jpg" alt="Hotel Lobby">
+
+<img src="restaurant.jpg" alt="Restaurant">
+
+<img src="suite.jpg" alt="Suite">
+
+<img src="honeymoon.jpg" alt="Honeymoon Room">
+
+<img src="room1.jpg" alt="Deluxe Room">
+
+<img src="bathroom.jpg" alt="Bathroom">
+
+</div>
+
+</section>
+
+
+
+<!-- LOCATION -->
+
+<section style="background:#111;">
+
+<h2 class="title">Find Us</h2>
+
+<p style="text-align:center;font-size:18px;margin-bottom:30px;">
+Hotel Platinum, Zarkawt, Aizawl, Mizoram
+</p>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.1!2d92.72!3d23.72"
+width="100%"
+height="450"
+style="border:0;border-radius:15px;"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</section>
+<!-- CONTACT -->
+
+<section>
+
+<h2 class="title">Contact Us</h2>
+
+<div style="text-align:center;font-size:18px;line-height:2;max-width:700px;margin:auto;">
+
+<p>📍 Hotel Platinum, Zarkawt, Aizawl, Mizoram</p>
+
+<p>📞 <a href="tel:+916909158272" style="color:#D4AF37;">6909158272</a></p>
+
+<p>📧 <a href="mailto:nexostudio2025@gmail.com" style="color:#D4AF37;">nexostudio2025@gmail.com</a></p>
+
+<br>
+
+<a href="https://wa.me/916909158272?text=Hello%20Hotel%20Platinum,%20I%20would%20like%20to%20book%20a%20room."
+class="btn whatsapp">
+Book on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<h2>Hotel Platinum</h2>
+
+<p>
+Luxury • Comfort • Hospitality
+</p>
+
+<br>
+
+<p>
+© 2026 Hotel Platinum.
+All Rights Reserved.
+</p>
+
+<br>
+
+<p style="color:#888;">
+Website Designed by <b>NexoStudio</b>
+</p>
+
+</footer>
+
+
+
+<button id="topBtn"
+style="
+display:none;
+position:fixed;
+bottom:25px;
+right:25px;
+padding:15px 18px;
+border:none;
+border-radius:50%;
+background:#D4AF37;
+color:#000;
+font-size:22px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+">
+↑
+</button>
+
+
+
+<script>
+
+/* Scroll to top */
+
+const topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+};
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+
+/* Hero Background Slider */
+
+const images=[
+
+"suite.jpg",
+
+"restaurant.jpg",
+
+"hall.jpg",
+
+"bar.jpg"
+
+];
+
+let i=0;
+
+setInterval(()=>{
+
+i=(i+1)%images.length;
+
+document.querySelector("header").style.background=
+
+`linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('${images[i]}') center/cover`;
+
+},5000);
+
+</script>
+
+</body>
+</html>
